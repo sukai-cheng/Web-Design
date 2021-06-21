@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>bottom-nav</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1471409_g6hvg6yqo15.css">
+</head>
+
+<body>
+	<div id="nav-tab">
+		<div class="nav-tab-item"
+			:class="{'active':activeIndex == index}"
+			v-for="(item, index) in items" :key="index"
+			@click = "activeIndex = index">
+			<i :class=['iconfont',item.icon,'nav-tab-item_icon']></i>
+			<p class="nav-tab-item_label">{{item.label}}</p>
+		</div>
+		<div class="nav-tab-overlay" :style="{'left':activeIndex * 130 + 'px'}"></div>
+
+	</div>
+	<!-- 引入vue -->
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+	<script>
+		new Vue({
+			el: '#nav-tab',
+			data() {
+				return {
+
+					items: [
+						{ icon: 'icon-shouye', label: '首页' },
+						{ icon: 'icon-guanzhu', label: '关注' },
+						{ icon: 'icon-faxian', label: '发现' },
+						{ icon: 'icon-xiaoxizhongxin', label: '消息中心' }
+					],
+					activeIndex: 0,
+				}
+			},
+		})
+	</script>
+</body>
+
+</html>

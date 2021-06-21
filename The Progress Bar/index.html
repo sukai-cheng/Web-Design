@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Progress bar</title>
+</head>
+<style>
+	.container{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	.progress-bar{
+		stroke-dasharray: 377;
+		stroke-dashoffset: 377;
+		transition: 0.5s;
+	}
+</style>
+<body>
+	<svg width="200" height="200" class="container">
+		<circle class="progress-bar" cx="100" cy="100" r="60" fill="transparent" stroke="#c0392b" stroke-width="10"></circle>
+		<text x="100" y="100"
+		fill="pink"
+		text-anchor="middle"
+		alignment-baseline="middle"
+		>xxx</text>
+	</svg>
+<script>
+	const progressBar = document.querySelector('.progress-bar');
+	const text = document.querySelector('text');
+	let index = 0;
+
+	const loadingArr = [1,4,10,20,30,60,70,100];
+
+	const total = progressBar.getTotalLength();
+
+	const timer = setInterval(()=>{
+		progressBar.style.strokeDashoffset = total - (loadingArr[index] / 100 * total);
+		index++;
+		if(index >= 5){
+			progressBar.style.stroke = '#2ecc71'
+		}
+		text.textContent = `${loadingArr[index]}%`
+		if(index == loadingArr.length){
+			clearInterval(timer);
+			text.textContent = 'TADA!'
+		}
+	},100)
+</script>
+</body>
+</html>

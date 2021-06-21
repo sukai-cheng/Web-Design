@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100vh;
+	background-color: #7dbfff;
+
+	/* 局中 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav-tab{
+	width: 600px;
+	height: 150px;
+	background-color: #fff;
+	display: flex;
+	position: relative;
+	border-radius:20px 20px 90px 90px;
+	border: 20px solid white;
+	overflow: hidden;
+}
+
+.nav-tab-item{
+	width: 130px;
+	height: 100%;
+	z-index: 2;
+
+	cursor: pointer;
+
+	transition: .3s;
+
+	/* 局中 */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+}
+
+.nav-tab-item.active{
+	width: 210px;
+}
+
+.nav-tab-item_icon{
+	color: #4298e7;
+	font-size: 32px !important; /*iconfont默认16px*/
+	transform: translate(0,0px);
+	transition: .3s;
+
+}
+
+.active .nav-tab-item_icon {
+	transform: translate(0,-10px);
+}
+
+.nav-tab-item_label{
+	color: #4298e7;
+	font-size: 20px;
+	user-select: none;
+	opacity: 0;
+	transition: .3s;
+}
+
+.active .nav-tab-item_label{
+	opacity: 1;
+}
+
+.nav-tab-overlay{
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	height: 100%;
+	width: 210px;
+	background-color: #e4f2ff;
+
+	border-radius: 10%;;
+
+	transition: .3s;
+}
+
