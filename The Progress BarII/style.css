@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #edf1f4;
+	min-height: 100vh;
+}
+
+.loader{
+	display: flex;
+	flex-direction: row;
+}
+
+.loader div{
+	position: relative;
+	overflow: hidden;
+	width: 40px;
+	height: 200px;
+	margin: 20px;
+	border-radius: 50px;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.05),#edf1f4);
+	box-shadow:
+		    15px 15px 20px rgba(0, 0, 0, 0.1),
+		    -15px -15px 20px #fff,
+		    inset -5px -5px 20px rgba(255, 255, 255, 0.5),
+		    inset 5px 5px 5px rgba(0, 0, 0, 0.05);
+
+	border: 2px solid #edf1f4;
+}
+
+.loader div::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 36px;
+	height: 36px;
+	box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.1) ,0 420px 0 400px #2196f3;
+	border-radius: 50px;
+	animation: animate 2.5s ease-in-out infinite;
+	/* 动画延迟加载 */
+	animation-delay: calc(var(--x) * -0.3s);
+
+}
+@keyframes animate {
+	0%{
+		transform: translateY(160px);
+		filter: hue-rotate(0deg);
+	}
+	50%{
+		transform: translateY(0px);
+		filter: hue-rotate(180deg);
+	}
+	100%{
+		transform: translateY(160px);
+		/* 色调旋转滤镜 */
+		filter: hue-rotate(360deg);
+	}
+
+
+}
