@@ -47,6 +47,7 @@ body{
 	animation: animate 2.5s ease-in-out infinite;
 	/* 动画延迟加载 */
 	animation-delay: calc(var(--x) * -0.3s);
+	);
 
 }
 @keyframes animate {
