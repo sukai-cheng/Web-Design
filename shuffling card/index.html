@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shuffling Card</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<ul class="slides">
+		<input type="radio" id="control-1" name="control" checked>
+		<input type="radio" id="control-2" name="control">
+		<input type="radio" id="control-3" name="control">
+		<div class="navigator slide-1">
+			<label for="control-3">
+				<i class="fas fa-chevron-left"></i>
+			</label>
+			<label for="control-2">
+				<i class="fas fa-chevron-right"></i>
+			</label>
+		</div>
+		<div class="navigator slide-2">
+			<label for="control-1">
+				<i class="fas fa-chevron-left"></i>
+			</label>
+			<label for="control-3">
+				<i class="fas fa-chevron-right"></i>
+			</label>
+		</div>
+		<div class="navigator slide-3">
+			<label for="control-1">
+				<i class="fas fa-chevron-left"></i>
+			</label>
+			<label for="control-1">
+				<i class="fas fa-chevron-right"></i>
+			</label>
+		</div>
+		<li class="slide">1</li>
+		<li class="slide">2</li>
+		<li class="slide">3</li>
+		<div class="controls-visible">
+			<label for="control-1"></label>
+			<label for="control-2"></label>
+			<label for="control-3"></label>
+		</div>
+
+	</ul>
+</body>
+</html>
