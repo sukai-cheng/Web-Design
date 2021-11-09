@@ -1,83 +1,91 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap") * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 html,
 body {
-  display: grid;
-  height: 100%;
-  /* 相当于aign-items 和 justify-items */
-  place-items: center;
-  text-align: center;
+    display: grid;
+    height: 100%;
+    /* 相当于aign-items 和 justify-items */
+    place-items: center;
+    text-align: center;
 }
 
 .wrapper {
-  height: 60px;
-  line-height: 60px;
-  width: 55vw;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
+    height: 60px;
+    line-height: 60px;
+    width: 55vw;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
 }
 
 .wrapper nav {
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 }
 
 .wrapper nav label {
-  flex: 1;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  cursor: pointer;
+    flex: 1;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
 }
 
 .wrapper nav label a {
-  position: relative;
-  z-index: -1;
-  color: #1d1f20;
-  font-size: 20px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.6s ease;
+    position: relative;
+    z-index: -1;
+    color: #1d1f20;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.6s ease;
 }
 
 .wrapper nav label a i {
-  font-size: 25px;
-  margin: 0 7px;
+    font-size: 25px;
+    margin: 0 7px;
 }
 
 .wrapper nav .tab {
-  position: absolute;
-  height: 100%;
-  width: 20%;
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
-  border-radius: 50px;
-  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+    border-radius: 50px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
 .wrapper nav #home:checked ~ label.home a {
-  color: #fff;
+    color: #fff;
 }
+
 .wrapper nav #inbox:checked ~ .tab {
-  left: 20%;
+    left: 20%;
 }
+
 .wrapper nav #contact:checked ~ .tab {
-  left: 40%;
+    left: 40%;
 }
+
 .wrapper nav #heart:checked ~ .tab {
-  left: 60%;
+    left: 60%;
 }
+
 .wrapper nav #about:checked ~ .tab {
-  left: 80%;
+    left: 80%;
 }
+
 .wrapper nav input {
-  display: none;
+    display: none;
 }
 
 .wrapper nav #home:checked ~ label.home a,
@@ -85,5 +93,5 @@ body {
 .wrapper nav #contact:checked ~ label.contact a,
 .wrapper nav #heart:checked ~ label.heart a,
 .wrapper nav #about:checked ~ label.about a {
-  color: #fff;
+    color: #fff;
 }
