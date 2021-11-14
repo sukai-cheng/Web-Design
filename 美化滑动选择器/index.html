@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="range">
+    <div class="sliderValue">
+        <span>100</span>
+    </div>
+    <div class="field">
+        <div class="value left">0</div>
+        <input type="range" min="0" max="200" value="100" step="1">
+        <div class="value right">200</div>
+    </div>
+</div>
+<script>
+    const slideValue = document.querySelector("span");
+    const inputSlider = document.querySelector("input")
+    inputSlider.oninput = (() => {
+        console.log('test')
+        slideValue.textContent = inputSlider.value;
+    })
+</script>
+</body>
+</html>
